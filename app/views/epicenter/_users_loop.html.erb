@@ -1,0 +1,16 @@
+<div class="row">
+  <% @users.each do |user| %>
+  <div class="col-md-4">
+    <div class="well">
+      <h3> <%= link_to user, show_user_path(id: user.id) %> </h3>
+      <p>
+        <%= user.bio %>
+      </p>
+      <p>
+        Location: <%= user.location %>
+      </p>
+      Joined on <%= user.created_at.strftime('%b %d, %Y') %>
+    </div>
+  </div>
+  <% end %>
+</div>

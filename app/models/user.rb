@@ -13,7 +13,9 @@ class User < ApplicationRecord
   # serialize
   serialize :following, Array
 
-
+  def to_s
+    '@' + self.username
+  end
 end
 
 
